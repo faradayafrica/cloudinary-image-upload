@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 cloudinary = "*"
+python-decouple = "*"
 
 [dev-packages]
 
