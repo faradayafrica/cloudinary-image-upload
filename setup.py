@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='cloudinary-upload',
-    version='0.0.1',
+    version='0.0.2',
     description='Upload a signed image to cloudinary effectively',
     long_description_content_type="text/markdown",
     long_description=open('README.md').read(),
