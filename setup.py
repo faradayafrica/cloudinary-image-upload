@@ -1,8 +1,8 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='cloudinary-upload',
-    version='0.0.3',
+    version='0.0.4',
     description='Upload a signed image to cloudinary effectively',
     long_description_content_type="text/markdown",
     long_description=open('README.md').read(),
@@ -15,6 +15,7 @@ setup(
         'Programming Language :: Python :: 3'
     ],
     keywords=['cloudinary', 'media asset'],
+    packages=find_packages(),
     install_requires=[
         'cloudinary',
         'python-decouple',
