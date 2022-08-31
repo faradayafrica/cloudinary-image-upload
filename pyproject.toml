@@ -1,0 +1,7 @@
+[project]
+name = "cloudinary-upload"
+version = "0.0.1"
+dependencies = [
+    "cloudinary",
+    'importlib-metadata; python_version<"3.9"',
+]
