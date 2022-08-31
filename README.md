@@ -1,8 +1,18 @@
 # About
 This library allows you to upload a signed image to cloudinary effectively. 
 
+<br>
+
 ## Installation
+Install the library to begin using it. <br>
+
     pip install cloudinary-upload
+
+Configure `.env` with your cloudinary credentials. <br>
+
+    CLOUDINARY_NAME=xxxxxxx
+    CLOUDINARY_API_KEY=xxxxxxxxxxx
+    CLOUDINARY_API_SECRET=xxxxxxxxx-xxxxxxx
 
 In the file (.py) that you wish to use it, import the library. <br>
 
