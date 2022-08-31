@@ -1,25 +1,24 @@
 # Navtive import
-import os, datetime, json, time
+import datetime, time
 
 # cloudinary import
 from cloudinary import config as cloudinary_config
 from cloudinary.uploader import upload
 from cloudinary.utils import api_sign_request
 
+# config import
+from decouple import config as env_config
+
 
 # cloudinary config
-CLOUDINARY_NAME="faraday-africa"
-CLOUDINARY_API_KEY="372228664337547"
-CLOUDINARY_API_SECRET="711Qcxf2zOLp35l-ALMmZVoDUW0"
-
 cloudinary_config(
-    cloud_name=CLOUDINARY_NAME,
-    api_key=CLOUDINARY_API_KEY,
-    api_secret=CLOUDINARY_API_SECRET
+    cloud_name=env_config("CLOUDINARY_NAME"),
+    api_key=env_config("CLOUDINARY_API_KEY"),
+    api_secret=env_config("CLOUDINARY_API_SECRET")
 )
 
 
-# convert datetime to unix timestamp
+# convert current datetime to unix timestamp
 datetime_now = datetime.datetime.now()
 timestamp = time.mktime(datetime_now.timetuple())
 
@@ -32,7 +31,7 @@ def sign_cloudinary_request(time_parmas):
     :param time parameter: The current time in Unix epoch format
     :return: A dictionary with the timestamp and the signature.
     """
-    data = api_sign_request(params_to_sign=time_parmas, api_secret=CLOUDINARY_API_KEY)
+    data = api_sign_request(params_to_sign=time_parmas, api_secret=env_config("CLOUDINARY_API_KEY"))
     return data
 
 
