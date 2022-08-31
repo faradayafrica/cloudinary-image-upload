@@ -16,7 +16,8 @@ setup(
     ],
     keywords=['cloudinary', 'media asset'],
     install_requires=[
-        'requests',
-        'importlib-metadata; python_version == "3.8"',
+        'cloudinary',
+        'python-decouple'
+        'importlib-metadata; python_version <= "3.9"',
     ],
 )
